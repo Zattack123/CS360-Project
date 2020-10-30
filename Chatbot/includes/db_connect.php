@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$_SESSION['testVar'] = "Test";
 
 
 $servername = "localhost";
