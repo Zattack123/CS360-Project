@@ -1,0 +1,23 @@
+<?php
+
+require "Chatbot/includes/db_connect.php"
+
+?>
+
+
+
+
+<html>
+<h1>Hello World</h1>
+<p>this is my change</p>
+<p>this is my second change</p>
+<p>this is a third change made by Shawn</p>
+<?php
+if(isset($_SESSION['testVar'])){
+  echo "<h2>Session Variables are set!!!!!</h2>";
+  echo '<h3>';
+  print_r($_SESSION);
+  echo '</h3>';
+}
+?>
+</html>
