@@ -4,8 +4,8 @@ $_SESSION['testVar'] = "Test";
 
 
 $servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "admin";
+$password = "admin";
 $dbName = "chatbot";
 
 $conn = mysqli_connect($servername, $username, $password, $dbName);
