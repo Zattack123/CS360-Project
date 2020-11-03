@@ -3,7 +3,7 @@ session_start();
 $_SESSION['testVar'] = "Test";
 
 
-$servername = "p:localhost:3306";
+$servername = "localhost:3306";
 $username = "root";
 $password = "root";
 $dbName = "chatbot";
