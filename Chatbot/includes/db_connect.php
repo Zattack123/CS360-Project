@@ -3,7 +3,7 @@ session_start();
 $_SESSION['testVar'] = "Test";
 
 
-$servername = "172.17.0.4";
+$servername = "172.17.0.2:3306";
 $username = "zach";
 $password = "zach";
 $dbName = "chatbot";
