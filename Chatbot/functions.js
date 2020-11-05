@@ -49,6 +49,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// If the user selects the computer science category
+function categoryComputerScience() {
+  var showChatbox = document.getElementById("input");
+  showChatbox.style.display = 'inline';
+
+  var categoryCs = document.getElementById("categoryselect");
+  categoryCs.style.display = 'none';
+
+  var questionText = document.createElement("h1");
+  questionText.innerHTML = "Please ask your computer science question.";
+
+  var questionFormat = document.createElement("p");
+  questionFormat.innerHTML = "Start your question with a question word (who, what, when, where, why, or how) for best results.";
+
+  document.getElementById("questiontexthere").appendChild(questionText);
+  document.getElementById("questiontexthere").appendChild(questionFormat);
+}
+
+// If the user selects the mathematics category
+function categoryMathematics() {
+  var showChatbox = document.getElementById("input");
+  showChatbox.style.display = 'inline';
+
+  var categoryMath = document.getElementById("categoryselect");
+  categoryMath.style.display = 'none';
+
+  var questionText = document.createElement("h1");
+  questionText.innerHTML = "Please ask your mathematics question.";
+
+  var questionFormat = document.createElement("p");
+  questionFormat.innerHTML = "Start your question with a question word (who, what, when, where, why, or how) for best results.";
+
+  document.getElementById("questiontexthere").appendChild(questionText);
+  document.getElementById("questiontexthere").appendChild(questionFormat);
+}
+
 function output(input) {
   let product;
 
