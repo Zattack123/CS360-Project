@@ -16,6 +16,7 @@ const question = [
   ]
 ];
 
+
 // Corresponding answers to the questions from the user
 // For example, question[1] corresponds to answer[1]
 const answer = [
