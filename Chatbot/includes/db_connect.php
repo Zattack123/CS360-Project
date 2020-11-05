@@ -5,7 +5,7 @@ $_SESSION['testVar'] = "Test";
 
 $servername = "db_container";
 $username = "root";
-$password = "";
+$password = "root";
 $dbName = "chatbot";
 
 $conn = mysqli_connect($servername, $username, $password, $dbName);
