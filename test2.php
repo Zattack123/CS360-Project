@@ -5,8 +5,6 @@ require "Chatbot/includes/db_connect.php"
 ?>
 
 
-
-
 <html>
 <h1>Hello World</h1>
 <p>this is my change</p>
@@ -15,9 +13,9 @@ require "Chatbot/includes/db_connect.php"
 <?php
 if(isset($_SESSION['testVar'])){
   echo "<h2>Session Variables are set!!!!!</h2>";
-  echo '<h3>';
-  print_r($_SESSION);
-  echo '</h3>';
+  echo '<h3>' . $_SESSION['testVar'] . "</h3>";
+  #print_r($_SESSION);
+  #echo '</h3>';
 }
 ?>
 </html>
