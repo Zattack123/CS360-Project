@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <?php
 
 require "db_connect.php";
@@ -16,12 +19,6 @@ else{
   $result = mysqli_stmt_get_result($stmt);
 }
 
-
-?>
-
-
-<?php
-
 if($stmt){
   $row = mysqli_fetch_array($result);
   echo "<p>Math Department Information</p>";
@@ -37,3 +34,6 @@ if($stmt){
   echo "<p>" . $row['CollegeWebsite'] . "</p>";
 }
  ?>
+
+</head>
+</html>
