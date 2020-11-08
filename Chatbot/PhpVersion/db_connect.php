@@ -27,17 +27,4 @@ if(!$conn){
   echo "working!";
 }
 
-echo "Hi, hopefully this works too."
-$sqlTest = "SELECT DeptHead, DeptHeadEmail, DeptWebsite FROM Math";
-$sqlResult = $conn->query($sqlTest);
-
-if ($sqlResult->num_rows > 0) {
-while($row = $sqlResult->fetch_assoc()) {
-echo "Department Head: " . $row["DeptHead"]. " - Email: " . $row["DeptHeadEmail"]. " - Department Website: " . $row["DeptWebsite"]. "<br>";
-}
-} else {
-echo "0 results";
-}
-$conn->close();
-
- ?>
+?>
