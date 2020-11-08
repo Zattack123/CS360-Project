@@ -37,7 +37,7 @@
     }
 
     echo "Hi, hopefully this works too."
-    $sqlTest = "SELECT DeptHead, DeptHeadEmail, DeptWebsite FROM Math";
+    $sqlTest = "SELECT Math.DeptHead, Math.DeptHeadEmail, Math.DeptWebsite FROM Math";
     $sqlResult = $conn->query($sqlTest);
 
     if ($sqlResult->num_rows > 0) {
