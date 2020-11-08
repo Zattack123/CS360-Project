@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <body>
 <?php
 
 require "db_connect.php";
@@ -34,6 +35,6 @@ if($stmt){
   echo "<p>" . $row['CollegeWebsite'] . "</p>";
 }
  ?>
-
+</body>
 </head>
 </html>
