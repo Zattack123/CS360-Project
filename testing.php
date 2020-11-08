@@ -1,7 +1,7 @@
 <?php
 
 require "db_connect.php";
-require "Chatbot/index.html";
+//require "Chatbot/index.html";
 
 $sql = "SELECT * FROM Math";
 
