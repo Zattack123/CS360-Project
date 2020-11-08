@@ -85,10 +85,12 @@ function categoryMathematics() {
   document.getElementById("questiontexthere").appendChild(questionText);
   document.getElementById("questiontexthere").appendChild(questionFormat);
 }
-
+// keeps track of number of failures in answering a certain question
+let errorCnt=0;
 function output(input) {
   let product;
 
+  
   // Transforms whatever the user inputs to lowercase
   // and removes anything that isn't a word, space, or digits
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");;
@@ -96,8 +98,16 @@ function output(input) {
   // Searches for an exact match with the 'question' array, if there are none, it goes will check if message contains 'coronavirus,' and if not - random error
   if (compare(question, answer, text)) {
     product = compare(question, answer, text);
+    errorCnt=0;
   } else {
-    product = error[Math.floor(Math.random() * error.length)];
+    // if number of failures exceeds 3, give up and redirect user to wku website
+    if(errorCnt>2) {
+      product = "I'm not sure how to answer your question. Try visiting wku.edu";
+    }
+    else {
+      product = error[Math.floor(Math.random() * error.length)];
+      errorCnt++;
+    }
   }
 
   // Add the text to the conversation transcript
