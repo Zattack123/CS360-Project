@@ -1,16 +1,4 @@
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "myusername",
-  password: "mypassword"
-
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
 
 // Possible questions from the user
 // These always need to be in lowercase
@@ -59,10 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (e.code === "Enter") {
 			let input = inputField.value;
 			inputField.value = "";
-			output(input);
+      showAnswer(input);
+			//output(input);
     }
   });
 });
+
+// AJAX test function
+function showAnswer(str) {
+  var xhttp;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("answertexthere").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "db_connect.php?q="+str, true);
+  xhttp.send();
+}
 
 // If the user selects the computer science category
 function categoryComputerScience() {
@@ -99,11 +101,9 @@ function categoryMathematics() {
   document.getElementById("questiontexthere").appendChild(questionText);
   document.getElementById("questiontexthere").appendChild(questionFormat);
 }
-// keeps track of number of failures in answering a certain question
-let errorCnt=0;
+
 function output(input) {
   let product;
-
 
   // Transforms whatever the user inputs to lowercase
   // and removes anything that isn't a word, space, or digits
@@ -112,16 +112,8 @@ function output(input) {
   // Searches for an exact match with the 'question' array, if there are none, it goes will check if message contains 'coronavirus,' and if not - random error
   if (compare(question, answer, text)) {
     product = compare(question, answer, text);
-    errorCnt=0;
   } else {
-    // if number of failures exceeds 3, give up and redirect user to wku website
-    if(errorCnt>2) {
-      product = "I'm not sure how to answer your question. Try visiting wku.edu";
-    }
-    else {
-      product = error[Math.floor(Math.random() * error.length)];
-      errorCnt++;
-    }
+    product = error[Math.floor(Math.random() * error.length)];
   }
 
   // Add the text to the conversation transcript
