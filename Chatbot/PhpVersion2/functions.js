@@ -62,7 +62,7 @@ function showAnswer(input) {
     document.getElementById("answertexthere").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "db_connect.php?q="+input, true);
+  xhttp.open("GET", "db_connect.php", true);
   xhttp.send();
 }
 
