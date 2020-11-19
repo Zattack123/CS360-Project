@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // AJAX test function
-function showAnswer(str) {
+function showAnswer(input) {
   var xhttp;
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -62,7 +62,7 @@ function showAnswer(str) {
     document.getElementById("answertexthere").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "db_connect.php?q="+str, true);
+  xhttp.open("GET", "db_connect.php?q="+input, true);
   xhttp.send();
 }
 

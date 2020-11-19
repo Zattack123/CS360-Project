@@ -36,5 +36,10 @@ $stmt->bind_result($depthead);
 $stmt->fetch();
 $stmt->close();
 
-echo $depthead;
+echo "<table>";
+echo "<tr>";
+echo "<th>Department Head</th>";
+echo "<td>" . $depthead . "</td>";
+echo "</tr>";
+echo "</table>";
 ?>
