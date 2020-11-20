@@ -13,7 +13,9 @@ const question = [
   [
     "who is the head of the mathematics department",
     "who is the head of the math department"
-  ]
+  ],
+  ["im satisfied"],
+  ["im unsatisfied"]
 ];
 
 
@@ -28,7 +30,9 @@ const answer = [
     "Hey, what's up?",
   ],
   ["The head of the computer science department is Dr. Huanjing Wang."],
-  ["The head of the mathematics department is Dr. Bruce Kessler."]
+  ["The head of the mathematics department is Dr. Bruce Kessler."],
+  ["We're glad you're satisfied! If you have any more questions, feel free to ask. Otherwise, have a great day!"],
+  ["Sorry you're unsatisfied. Is there anything else you want to know?"]
 ];
 
 // Error response output to the user if the question isn't found
@@ -87,9 +91,10 @@ function categoryMathematics() {
 }
 // keeps track of number of failures in answering a certain question
 let errorCnt=0;
+
+
 function output(input) {
   let product;
-
   
   // Transforms whatever the user inputs to lowercase
   // and removes anything that isn't a word, space, or digits
@@ -99,6 +104,9 @@ function output(input) {
   if (compare(question, answer, text)) {
     product = compare(question, answer, text);
     errorCnt=0;
+    // makes the satisfaction question visible
+    var satisfquest = document.getElementById("satisfactionquestion");
+    satisfquest.style.visibility='visible';
   } else {
     // if number of failures exceeds 3, give up and redirect user to wku website
     if(errorCnt>2) {
@@ -139,4 +147,15 @@ function addChat(input, product) {
   botDiv.id = "bot";
   botDiv.innerHTML = `Chatbot: <span id="bot-response">${product}</span>`;
   mainDiv.appendChild(botDiv);
+}
+
+// checks if user is satisfied with Chatbot response
+function satisfaction(status) {
+  if (status=='sat') {
+    var input = "I'm satisfied";
+  }
+  else {
+    var input = "I'm unsatisfied";
+  }
+  output(input);
 }

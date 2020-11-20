@@ -13,12 +13,6 @@
       <div class="container" id="categoryselect">
 		      <h1>Which of the following categories is your question related to? </br></br></h1>
 
-        <!--
-        I'm thinking we'll have two different databases of information
-        for these categories. For example, each database will have
-        a different department head based on the chosen category.
-        These are just placeholder for now.
-        -->
         <div class="row">
           <div class="col text-center">
 		      <button type="button" onclick="categoryComputerScience()" id="categorycs" class="btn btn-danger btn-default btn-lg">Computer Science</button>
@@ -32,7 +26,15 @@
           <input style="display:none" id="input" type="text" placeholder="Enter your response" autocomplete="off"/>
       </div>
 
-		</div>
+    </div>
+
+    <!-- Performance metric: checks satisfaction of user -->
+    <div id="satisfactionquestion" class="col text-right" style="visibility:hidden">
+        <p>Are you satisfied, or unsatisfied?</p>
+        <button type="button" onclick="satisfaction('sat')" class="btn btn-success btn-default btn-sm" >Satisfied</button>
+        <button type="button" onclick="satisfaction('unsat')" class="btn btn-warning btn-default btn-sm" >Unsatisfied</button>
+    </div>
+
 	</body>
 
 </html>
