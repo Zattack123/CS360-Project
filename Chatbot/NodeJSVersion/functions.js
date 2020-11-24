@@ -27,7 +27,9 @@ const question = [
   [
     "who is the head of the mathematics department",
     "who is the head of the math department"
-  ]
+  ],
+  ["im satisfied"],
+  ["im unsatisfied"]
 ];
 
 
@@ -42,7 +44,9 @@ const answer = [
     "Hey, what's up?",
   ],
   ["The head of the computer science department is Dr. Huanjing Wang."],
-  ["The head of the mathematics department is Dr. Bruce Kessler."]
+  ["The head of the mathematics department is Dr. Bruce Kessler."],
+  ["We're glad you're satisfied! If you have any more questions, feel free to ask. Otherwise, have a great day!"],
+  ["Sorry you're unsatisfied. Is there anything else you want to know?"]
 ];
 
 // Error response output to the user if the question isn't found
