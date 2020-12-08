@@ -28,7 +28,7 @@ if(!$conn){
 }
 
 // Table Stuff
-$sql = "SELECT DeptHead FROM 'Math'";
+$sql = "SELECT DeptHead FROM Math";
 $stmt = $mysqli->prepare($sql);
 $stmt->execute();
 $stmt->store_result();
