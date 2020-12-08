@@ -42,4 +42,5 @@ echo "<th>Department Head</th>";
 echo "<td>" . $depthead . "</td>";
 echo "</tr>";
 echo "</table>";
+echo $depthead;
 ?>
