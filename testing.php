@@ -7,7 +7,7 @@
 require "Chatbot/includes/db_connect.php";
 //require "Chatbot/index.html";
 
-$sql = "SELECT * FROM Math";
+$sql = "SELECT * FROM computerscience";
 
 $stmt = mysqli_stmt_init($conn);
 
