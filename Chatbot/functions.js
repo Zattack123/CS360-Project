@@ -56,6 +56,7 @@ const answer = [
     "Hi",
     "Howdy",
     "Hey, what's up?",
+    "yeet!"
   ],
   ["The head of the computer science program is Dr. Huanjing Wang."],
   ["The head of the mathematics department is Dr. Bruce Kessler."],
