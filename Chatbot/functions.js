@@ -8,11 +8,29 @@ const question = [
   ],
   [
     "who is the head of the computer science department",
-    "who is the head of the cs department"
+    "who is the head of the cs department",
+    "who is the head of the cs program",
+    "who is the head of the computer science program"
   ],
   [
     "who is the head of the mathematics department",
     "who is the head of the math department"
+  ],
+  [
+    "where can i find info on the cs program",
+    "where can i find information on the cs program",
+    "where can i find info on the computer science program",
+    "where can i find information on the computer science program",
+    "where can i find info on the cs department",
+    "where can i find information on the cs department",
+    "where can i find info on the computer science department",
+    "where can i find information on the computer science department",
+  ],
+  [
+    "where can i find info on the math department",
+    "where can i find information on the math department",
+    "where can i find info on the mathematics department",
+    "where can i find information on the mathematics department",
   ],
   ["im satisfied"],
   ["im unsatisfied"]
@@ -29,8 +47,11 @@ const answer = [
     "Howdy",
     "Hey, what's up?",
   ],
-  ["The head of the computer science department is Dr. Huanjing Wang."],
+  ["The head of the computer science program is Dr. Huanjing Wang."],
   ["The head of the mathematics department is Dr. Bruce Kessler."],
+  ["The CS Program website can be found at https://www.wku.edu/cs/"],
+  ["The Math departments website is: https://www.wku.edu/math"],
+
   ["We're glad you're satisfied! If you have any more questions, feel free to ask. Otherwise, have a great day!"],
   ["Sorry you're unsatisfied. Is there anything else you want to know?"]
 ];
@@ -95,7 +116,7 @@ let errorCnt=0;
 
 function output(input) {
   let product;
-  
+
   // Transforms whatever the user inputs to lowercase
   // and removes anything that isn't a word, space, or digits
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");;
