@@ -32,6 +32,16 @@ const question = [
     "where can i find info on the mathematics department",
     "where can i find information on the mathematics department",
   ],
+  [
+    "where can i find the degree paths for the cs program",
+    "where can i find the degree paths for the computer science program",
+    "where can i find the degree paths for the cs department",
+    "where can i find the degree paths for the computer science department"
+  ],
+  [
+    "where can i find the degree paths for the math department",
+    "where can i find the degree paths for the mathematics department"
+  ],
   ["im satisfied"],
   ["im unsatisfied"]
 ];
@@ -50,7 +60,9 @@ const answer = [
   ["The head of the computer science program is Dr. Huanjing Wang."],
   ["The head of the mathematics department is Dr. Bruce Kessler."],
   ["The CS Program website can be found at https://www.wku.edu/cs/"],
-  ["The Math departments website is: https://www.wku.edu/math"],
+  ["The Math department's website is: https://www.wku.edu/math"],
+  ["You can find the CS Degree Paths at https://www.wku.edu/cs/student_resouces/four_year_plan.php"],
+  ["You can find the Math Degree Paths at: https://catalog.wku.edu/undergraduate/science-engineering/mathematics/#programstext"],
 
   ["We're glad you're satisfied! If you have any more questions, feel free to ask. Otherwise, have a great day!"],
   ["Sorry you're unsatisfied. Is there anything else you want to know?"]
