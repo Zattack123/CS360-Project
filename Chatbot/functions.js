@@ -89,7 +89,7 @@ const question = [
     "what college is the computer science program in",
   ],
   [
-    "what college is the math department in"
+    "what college is the math department in",
     "what college is the mathematics department in"
   ],
   ["im satisfied"],
