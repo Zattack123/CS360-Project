@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot</title>
+        <script type="text/javascript" src="myfunctions.js"></script>
+        <link rel="stylesheet" href="mystylemin.css">
+    </head>
+    
+    <body>
+        <div id="introPage">
+            <h1>Which of the following categories is your question related to?</h1>
+
+            <div class="btn-group">
+                <button class="button" onclick="categoryComputerScience()">Computer Science</button>
+                <button class="button" onclick="categoryMathematics()">Mathematics</button>
+            </div>
+        </div>
+
+        <div id="chatPage">
+            <h2  id="qPromptCS">Please ask your computer science question.</h2>
+            <h2 id="qPromptMath">Please ask your mathematics question.</h2>
+            <div id="addedText" class="addedText">
+
+            </div>
+            <input id="input" type="text" placeholder="Enter your response" autocomplete="off"/>
+        </div>
+
+
+        <div id="satQ">
+            <p>Are you satisfied, or unsatisfied?</p>
+            <button class="button" onclick="output(satisfaction('sat'))" >Satisfied</button>
+            <button class="button" onclick="output(satisfaction('unsat'))" >Unsatisfied</button>
+        </div>
+
+    </body>
+</html>

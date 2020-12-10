@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(230, 173, 173);
+    text-align: center;
+}
+
+#introPage {
+    display: inline;
+}
+#chatPage {
+    display: none;
+    /* margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+#satQ {
+    visibility: hidden;
+}
+#qPromptCS {
+    display: none;
+}
+#qPromptMath {
+    display: none;
+}
+
+#input {
+}
+
+
+
+
+
+
+.button {
+    background-color: #be0000;
+    border: 1px solid #550000;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.btn-group .button:hover {
+  background-color: #6d0303;
+}
