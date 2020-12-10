@@ -8,11 +8,89 @@ const question = [
   ],
   [
     "who is the head of the computer science department",
-    "who is the head of the cs department"
+    "who is the head of the cs department",
+    "who is the head of the cs program",
+    "who is the head of the computer science program"
   ],
   [
     "who is the head of the mathematics department",
     "who is the head of the math department"
+  ],
+  [
+    "where can i find info on the cs program",
+    "where can i find information on the cs program",
+    "where can i find info on the computer science program",
+    "where can i find information on the computer science program",
+    "where can i find info on the cs department",
+    "where can i find information on the cs department",
+    "where can i find info on the computer science department",
+    "where can i find information on the computer science department",
+  ],
+  [
+    "where can i find info on the math department",
+    "where can i find information on the math department",
+    "where can i find info on the mathematics department",
+    "where can i find information on the mathematics department",
+  ],
+  [
+    "where can i find the degree paths for the cs program",
+    "where can i find the degree paths for the computer science program",
+    "where can i find the degree paths for the cs department",
+    "where can i find the degree paths for the computer science department"
+  ],
+  [
+    "where can i find the course rotation for the cs program",
+    "where can i find the course rotation for the computer science program",
+    "where can i find the course rotation for the cs department",
+    "where can i find the course rotation for the computer science department"
+  ],
+  [
+    "where can i find the course rotation for the math department",
+    "where can i find the course rotation for the mathematics department"
+  ],
+  [
+    "where can i find the degree paths for the math department",
+    "where can i find the degree paths for the mathematics department"
+  ],
+  [
+    "where can i find the directory for the cs program",
+    "where can i find the directory for the computer science program",
+    "where can i find the directory for the cs department",
+    "where can i find the directory for the computer science department"
+  ],
+  [
+    "where can i find the directory for the math department",
+    "where can i find the directory for the mathematics department"
+  ],
+  [
+    "where can i contact the cs program",
+    "where can i contact the computer science program",
+    "where can i contact the cs department",
+    "where can i contact the computer science department",
+  ],
+  [
+    "where can i contact the math department",
+    "where can i contact the mathematics department",
+  ],
+  [
+    "where can i find cs graduate information",
+    "where can i find computer science graduate information",
+    "where can i find graduate information for the cs program",
+    "where can i find graduate information for the computer science program"
+  ],
+  [
+    "where can i find math graduate information",
+    "where can i find mathematics graduate information",
+    "where can i find graduate info for math department",
+    "where can i find graduate info for the mathematics department"
+  ],
+  [
+    "what college is the cs program in",
+    "what college is the computer science program in",
+  ],
+  [
+    "what college is the math department in",
+    "what college is the mathematics department in"
   ],
   ["im satisfied"],
   ["im unsatisfied"]
@@ -28,9 +106,27 @@ const answer = [
     "Hi",
     "Howdy",
     "Hey, what's up?",
+    "yeet!"
   ],
-  ["The head of the computer science department is Dr. Huanjing Wang."],
+  ["The head of the computer science program is Dr. Huanjing Wang."],
   ["The head of the mathematics department is Dr. Bruce Kessler."],
+  ["The CS Program website can be found at https://www.wku.edu/cs/"],
+  ["The Math department's website is: https://www.wku.edu/math"],
+  ["You can find the CS Degree Paths at https://www.wku.edu/cs/student_resouces/four_year_plan.php"],
+  ["You can find the Math Degree Paths at: https://catalog.wku.edu/undergraduate/science-engineering/mathematics/#programstext"],
+  ["You can find the CS Course Rotation at: https://wku.edu/cs/student_resources/undergraduate_rotation.php"],
+  ["You can find the Math Course Rotation at: https://www.wku.edu/math/courserotation.php"],
+  ["The CS Program Directory can be found at https://wwww.wku.edu/cs/staff/staff.php"],
+  ["The Math Department's Directory can be found at: https://www.wku.edu/math/staff/index.php"],
+  ["Contact the CS Program at https://www.wku.edu/cs/contacts.php"],
+  ["Contact the Math Department at: https://www.wku.edu/math/contact_us.php"],
+  ["Graduate Info can be found here: https://wwww.wku.edu/csgraduate/index.php"],
+  ["Graduate information can be found here: https://www.wku.edu/math/math_graduate_booklet_2016.pdf"],
+  ["The CS Program is a part of the School of Engineering and Applied Sciences (SEAS), Learn more about SEAS at https://www.wku.edu/seas/"],
+  ["The Math Department is a part of the Ogden College of Science and Engineering (OCSE), You can find more information about OCSE at: https://www.wku.edu/ogden/"],
+
+
+
   ["We're glad you're satisfied! If you have any more questions, feel free to ask. Otherwise, have a great day!"],
   ["Sorry you're unsatisfied. Is there anything else you want to know?"]
 ];
@@ -95,7 +191,7 @@ let errorCnt=0;
 
 function output(input) {
   let product;
-  
+
   // Transforms whatever the user inputs to lowercase
   // and removes anything that isn't a word, space, or digits
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");;
