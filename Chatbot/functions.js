@@ -253,5 +253,13 @@ function satisfaction(status) {
   else {
     var input = "I'm unsatisfied";
   }
-  output(input);
+  return input;
 }
+
+
+module.exports = {
+  satisfaction: satisfaction,
+  compare: compare,
+  categoryComputerScience: categoryComputerScience,
+  categoryMathematics: categoryMathematics
+};
